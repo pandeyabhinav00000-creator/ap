@@ -1,0 +1,1941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Namveda Ayurveda — Naturally Pure Living</title>
+<link rel="icon" type="image/png" href="https://i.imgur.com/AzOWZzB.png">
+<link rel="apple-touch-icon" href="https://i.imgur.com/AzOWZzB.png">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #004225;
+  --secondary: #355E3B;
+  --accent: #4C6B47;
+  --light-green: #e8f0e9;
+  --gold: #b8965a;
+  --cream: #faf7f2;
+  --white: #ffffff;
+  --black: #0a0a0a;
+  --text: #1a1a1a;
+  --text-muted: #666;
+  --border: #d4ddd5;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+button{cursor:pointer;font-family:'DM Sans',sans-serif}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--light-green)}
+::-webkit-scrollbar-thumb{background:var(--secondary);border-radius:3px}
+
+/* ===== HEADER ===== */
+#header{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--primary);box-shadow:0 2px 20px rgba(0,66,37,0.4);transition:all .3s}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:8px 18px;max-width:1400px;margin:0 auto}
+.logo-area{display:flex;align-items:center;gap:11px;cursor:pointer}
+.logo-img-wrap{width:44px;height:44px;border-radius:0!important;overflow:visible;border:none!important;background:transparent!important;flex-shrink:0;display:flex;align-items:center;justify-content:center;box-shadow:none!important;padding:0!important}
+.logo-img-wrap img{width:100%;height:100%;object-fit:contain;object-position:center center;display:block;border-radius:0!important;border:none!important;background:transparent!important;box-shadow:none!important}
+@media(min-width:640px){.logo-img-wrap{width:52px;height:52px}}
+@media(min-width:960px){.logo-img-wrap{width:60px;height:60px}}
+.logo-text .brand-name{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:700;color:#fff;letter-spacing:.5px;line-height:1.2}
+.logo-text .slogan{font-size:.62rem;color:rgba(255,255,255,0.65);letter-spacing:2px;text-transform:uppercase;font-weight:300}
+@media(max-width:360px){.logo-text .brand-name{font-size:.98rem}.logo-text .slogan{display:none}}
+.header-actions{display:flex;align-items:center;gap:6px}
+.header-btn{background:none;border:none;color:#fff;padding:8px;border-radius:50%;transition:background .2s;position:relative;display:flex;align-items:center;justify-content:center}
+.header-btn:hover{background:rgba(255,255,255,0.15)}
+.header-btn svg{width:22px;height:22px}
+.cart-badge{position:absolute;top:2px;right:2px;background:var(--gold);color:#fff;font-size:.55rem;font-weight:600;width:16px;height:16px;border-radius:50%;display:flex;align-items:center;justify-content:center;line-height:1}
+
+/* ===== MAIN CONTENT ===== */
+#main{margin-top:76px}
+.page{display:none}
+.page.active{display:block}
+
+/* ===== UNIVERSAL SUB-PAGE TOP NAV ===== */
+.sub-page-nav{display:flex;align-items:center;gap:10px;padding:10px 20px;background:#fff;border-bottom:1px solid var(--border);box-shadow:0 1px 6px rgba(0,0,0,.04);position:sticky;top:76px;z-index:99;flex-wrap:wrap}
+.btn-back-home{display:inline-flex;align-items:center;gap:6px;padding:7px 18px;background:var(--secondary);color:#fff;border-radius:50px;font-size:.78rem;font-weight:600;cursor:pointer;border:none;font-family:'DM Sans',sans-serif;letter-spacing:.4px;transition:background .2s,transform .15s;white-space:nowrap;text-decoration:none;line-height:1}
+.btn-back-home:hover{background:var(--accent);transform:translateX(-2px)}
+.btn-back-home svg{width:13px;height:13px;flex-shrink:0}
+.sub-breadcrumb{display:flex;align-items:center;gap:5px;font-size:.78rem;color:var(--text-muted);flex-wrap:wrap;flex:1}
+.sub-breadcrumb a{color:var(--primary);font-weight:500;cursor:pointer;transition:color .2s;text-decoration:none}
+.sub-breadcrumb a:hover{color:var(--secondary)}
+.sub-breadcrumb .bc-arrow{color:#ccc;font-size:.7rem}
+.sub-breadcrumb .bc-active{color:var(--text-muted)}
+
+/* ===== HERO SEARCH AREA ===== */
+.hero-search{padding:40px 20px 20px;text-align:center;background:linear-gradient(180deg,rgba(0,66,37,0.05) 0%,transparent 100%)}
+.hero-search h1{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,4vw,2.4rem);color:var(--primary);font-weight:600;margin-bottom:6px;line-height:1.2}
+.hero-search p{font-size:.85rem;color:var(--text-muted);margin-bottom:20px;letter-spacing:1px;text-transform:uppercase}
+.search-wrap{max-width:560px;margin:0 auto;position:relative}
+.search-wrap input{width:100%;padding:14px 50px 14px 20px;border:2px solid var(--border);border-radius:50px;font-size:.95rem;background:#fff;color:var(--text);font-family:'DM Sans',sans-serif;outline:none;transition:border-color .2s,box-shadow .2s}
+.search-wrap input:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(0,66,37,0.1)}
+.search-wrap button{position:absolute;right:6px;top:50%;transform:translateY(-50%);background:var(--primary);border:none;color:#fff;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.search-wrap button:hover{background:var(--secondary)}
+.search-wrap button svg{width:18px;height:18px}
+.search-results{position:absolute;top:calc(100% + 8px);left:0;right:0;background:#fff;border-radius:16px;box-shadow:0 8px 30px rgba(0,0,0,.12);z-index:200;max-height:300px;overflow-y:auto;display:none}
+.search-results.show{display:block}
+.search-result-item{padding:12px 20px;display:flex;align-items:center;gap:12px;cursor:pointer;transition:background .15s;border-bottom:1px solid #f0f0f0}
+.search-result-item:hover{background:var(--light-green)}
+.search-result-item img{width:40px;height:40px;border-radius:8px;object-fit:cover}
+.search-result-item .sr-name{font-size:.9rem;font-weight:500;color:var(--text)}
+.search-result-item .sr-price{font-size:.8rem;color:var(--accent)}
+
+/* ===== CATEGORY CAROUSEL ===== */
+.cat-section{padding:30px 0 20px;overflow:hidden}
+.cat-section h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--primary);text-align:center;margin-bottom:20px;font-weight:600}
+.cat-track-wrap{overflow:hidden;position:relative;width:100%}
+.cat-track-wrap::before,.cat-track-wrap::after{content:'';position:absolute;top:0;bottom:0;width:60px;z-index:10;pointer-events:none}
+.cat-track-wrap::before{left:0;background:linear-gradient(to right,var(--cream),transparent)}
+.cat-track-wrap::after{right:0;background:linear-gradient(to left,var(--cream),transparent)}
+.cat-track{display:flex;gap:0;padding:10px 0;width:max-content;will-change:transform;cursor:grab}
+.cat-track.animating{animation:catInfiniteScroll var(--cat-dur,24s) linear infinite}
+.cat-track:hover{animation-play-state:paused}
+.cat-track:active{cursor:grabbing}
+@keyframes catInfiniteScroll{0%{transform:translateX(0)}100%{transform:translateX(var(--cat-offset,-900px))}}
+.cat-item{display:flex;flex-direction:column;align-items:center;gap:10px;cursor:pointer;min-width:120px;padding:0 16px}
+.cat-circle{width:90px;height:90px;border-radius:50%;overflow:hidden;border:3px solid var(--accent);transition:transform .3s,border-color .3s,box-shadow .3s;box-shadow:0 4px 15px rgba(0,66,37,0.15);flex-shrink:0}
+.cat-circle img{width:100%;height:100%;object-fit:cover;display:block}
+.cat-item:hover .cat-circle{transform:scale(1.08);border-color:var(--primary);box-shadow:0 6px 22px rgba(0,66,37,0.3)}
+.cat-item span{font-size:.78rem;font-weight:500;color:var(--primary);text-align:center;letter-spacing:.5px;text-transform:uppercase;white-space:nowrap}
+
+/* ===== BANNER ===== */
+.banner-section{padding:20px 20px 30px;max-width:1400px;margin:0 auto}
+.banner-img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:16px;box-shadow:0 8px 30px rgba(0,0,0,.12)}
+
+/* ===== PRODUCTS SECTION ===== */
+.products-section{padding:10px 20px 40px;max-width:1400px;margin:0 auto}
+.section-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:10px}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,3.5vw,2rem);color:var(--primary);font-weight:600}
+.section-title span{color:var(--gold);font-style:italic}
+.products-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media(min-width:640px){.products-grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:960px){.products-grid{grid-template-columns:repeat(4,1fr)}}
+
+.product-card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06);transition:transform .3s,box-shadow .3s;position:relative}
+.product-card:hover{transform:translateY(-4px);box-shadow:0 8px 28px rgba(0,0,0,.12)}
+.product-img-wrap{position:relative;aspect-ratio:1;overflow:hidden;background:#f5f5f0}
+.product-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.product-card:hover .product-img-wrap img{transform:scale(1.05)}
+.wishlist-btn{position:absolute;top:10px;right:10px;background:#fff;border:none;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.1);transition:background .2s,transform .2s;z-index:2}
+.wishlist-btn:hover{transform:scale(1.1)}
+.wishlist-btn svg{width:16px;height:16px;stroke:var(--text-muted);transition:stroke .2s,fill .2s}
+.wishlist-btn.active svg{stroke:#e05555;fill:#e05555}
+.product-info{padding:12px 14px 16px}
+.product-name{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:var(--primary);margin-bottom:4px;line-height:1.3}
+.product-desc{font-size:.75rem;color:var(--text-muted);line-height:1.5;margin-bottom:10px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.product-price{font-size:1rem;font-weight:600;color:var(--primary);margin-bottom:12px}
+.product-btns{display:flex;gap:6px;flex-wrap:wrap}
+.btn-cart{flex:1;padding:8px 6px;border:2px solid var(--primary);background:transparent;color:var(--primary);border-radius:8px;font-size:.75rem;font-weight:600;transition:all .2s;letter-spacing:.3px;min-width:0}
+.btn-cart:hover{background:var(--primary);color:#fff}
+.btn-buy{flex:1;padding:8px 6px;background:var(--primary);color:#fff;border:2px solid var(--primary);border-radius:8px;font-size:.75rem;font-weight:600;transition:background .2s;letter-spacing:.3px;min-width:0}
+.btn-buy:hover{background:var(--secondary)}
+.view-more-wrap{text-align:center;margin-top:28px}
+.btn-view-more{display:inline-block;padding:13px 40px;border:2px solid var(--primary);color:var(--primary);border-radius:50px;font-size:.9rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;transition:all .3s}
+.btn-view-more:hover{background:var(--primary);color:#fff}
+
+/* ===== FAQ ===== */
+.faq-section{background:var(--primary);padding:60px 20px;color:#fff}
+.faq-inner{max-width:800px;margin:0 auto}
+.faq-section .section-title{color:#fff;margin-bottom:30px;text-align:center}
+.faq-section .section-title span{color:rgba(255,255,255,0.7)}
+.faq-item{border-bottom:1px solid rgba(255,255,255,0.2);overflow:hidden}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:18px 0;cursor:pointer;gap:12px}
+.faq-q-text{font-size:.95rem;font-weight:500;line-height:1.4;flex:1}
+.faq-icon{width:28px;height:28px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-radius:50%;background:rgba(255,255,255,0.08);border:1.5px solid rgba(255,255,255,0.18);transition:background .25s,border-color .25s,transform .35s cubic-bezier(.4,0,.2,1)}
+.faq-icon svg{width:14px;height:14px;stroke:rgba(255,255,255,0.75);transition:stroke .25s;display:block}
+.faq-q:hover .faq-icon{background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.35)}
+.faq-q:hover .faq-icon svg{stroke:#fff}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .42s cubic-bezier(.4,0,.2,1),padding .32s;font-size:.88rem;line-height:1.7;color:rgba(255,255,255,0.8);padding-bottom:0}
+.faq-item.open .faq-a{max-height:220px;padding-bottom:18px}
+.faq-item.open .faq-icon{transform:rotate(180deg);background:rgba(255,255,255,0.18);border-color:rgba(255,255,255,0.4)}
+.faq-item.open .faq-icon svg{stroke:#fff}
+
+/* ===== TESTIMONIALS ===== */
+.testimonials-section{padding:60px 20px;background:var(--light-green);overflow:hidden}
+.test-header{text-align:center;margin-bottom:36px}
+.test-track-outer{overflow:hidden;position:relative}
+.test-track-outer::before,.test-track-outer::after{content:'';position:absolute;top:0;bottom:0;width:80px;z-index:10;pointer-events:none}
+.test-track-outer::before{left:0;background:linear-gradient(to right,var(--light-green),transparent)}
+.test-track-outer::after{right:0;background:linear-gradient(to left,var(--light-green),transparent)}
+.test-track{display:flex;gap:20px;width:max-content;animation:testScroll 40s linear infinite;padding:10px 4px;cursor:grab}
+.test-track:hover{animation-play-state:paused}
+.test-track:active{cursor:grabbing}
+@keyframes testScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.test-card{background:#fff;border-radius:18px;padding:24px;width:300px;flex-shrink:0;box-shadow:0 4px 20px rgba(0,0,0,.07);border-top:3px solid var(--accent)}
+.test-stars{color:var(--gold);font-size:1rem;margin-bottom:10px;letter-spacing:2px}
+.test-text{font-size:.85rem;line-height:1.7;color:var(--text-muted);font-style:italic;margin-bottom:14px}
+.test-author-name{font-weight:600;font-size:.9rem;color:var(--primary)}
+.test-author-info{font-size:.75rem;color:var(--text-muted);margin-top:2px}
+
+/* ===== ABOUT US ===== */
+.about-section{padding:60px 20px;max-width:1200px;margin:0 auto}
+.about-inner{display:grid;grid-template-columns:1fr;gap:36px;align-items:center}
+@media(min-width:768px){.about-inner{grid-template-columns:1fr 1fr}}
+.about-img{border-radius:20px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,.12)}
+.about-img img{width:100%;height:100%;object-fit:cover}
+.about-content .section-title{margin-bottom:16px;text-align:left}
+.about-text{font-size:.9rem;line-height:1.8;color:var(--text-muted);margin-bottom:20px}
+.about-points{list-style:none;display:flex;flex-direction:column;gap:10px}
+.about-points li{display:flex;align-items:flex-start;gap:10px;font-size:.85rem;color:var(--text)}
+.about-points li::before{content:'✦';color:var(--accent);font-size:.7rem;margin-top:3px;flex-shrink:0}
+
+/* ===== FOOTER ===== */
+footer{background:#004225;color:#fff;padding:50px 20px 24px;border-top:3px solid #355E3B}
+.footer-top{display:grid;grid-template-columns:1fr;gap:36px;max-width:1200px;margin:0 auto;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,0.12)}
+@media(min-width:640px){.footer-top{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:960px){.footer-top{grid-template-columns:1.5fr 1fr 1fr 1fr}}
+.footer-brand .logo-area{margin-bottom:14px}
+.footer-brand .logo-area img{width:48px;height:48px}
+.footer-brand .brand-name{color:#ffffff;font-weight:700}
+.footer-brand .slogan{color:rgba(255,255,255,.6);letter-spacing:2px}
+.footer-brand p{font-size:.82rem;line-height:1.8;color:rgba(255,255,255,.7);margin-bottom:16px}
+.social-links{display:flex;gap:12px}
+.social-link{width:40px;height:40px;border:1.5px solid rgba(255,255,255,.25);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;transition:all .25s;background:rgba(255,255,255,.05)}
+.social-link:hover{background:#4C6B47;border-color:#4C6B47;transform:translateY(-2px);box-shadow:0 4px 14px rgba(76,107,71,.5)}
+.social-link svg{width:18px;height:18px}
+.footer-col h4{font-size:.78rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:18px;position:relative;padding-bottom:10px}
+.footer-col h4::after{content:'';position:absolute;bottom:0;left:0;width:28px;height:1.5px;background:#4C6B47;border-radius:2px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+.footer-col ul li a{font-size:.85rem;color:rgba(255,255,255,.75);transition:color .2s,padding-left .2s;display:inline-block}
+.footer-col ul li a:hover{color:#9dc99e;padding-left:4px}
+.footer-bottom{text-align:center;padding-top:24px;max-width:1200px;margin:0 auto}
+.footer-bottom p{font-size:.78rem;color:rgba(255,255,255,.45);line-height:1.8}
+.footer-bottom a{color:rgba(255,255,255,.65)!important;transition:color .2s}
+.footer-bottom a:hover{color:#9dc99e!important}
+.whatsapp-catalog{display:inline-flex;align-items:center;gap:8px;background:#1a7a47;color:#fff;padding:9px 20px;border-radius:50px;font-size:.8rem;font-weight:600;margin-top:12px;transition:all .25s;border:1.5px solid rgba(255,255,255,.15);box-shadow:0 2px 10px rgba(0,0,0,.2)}
+.whatsapp-catalog:hover{background:#25a55e;border-color:rgba(255,255,255,.3);transform:translateY(-1px);box-shadow:0 4px 16px rgba(0,0,0,.3)}
+
+/* ===== MODALS ===== */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:2000;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transition:all .3s;backdrop-filter:blur(4px)}
+.modal-overlay.open{opacity:1;visibility:visible}
+.modal-box{background:#fff;border-radius:20px;max-width:480px;width:100%;padding:36px 30px;position:relative;transform:translateY(20px);transition:transform .3s;max-height:90vh;overflow-y:auto}
+.modal-overlay.open .modal-box{transform:translateY(0)}
+.modal-close{position:absolute;top:16px;right:16px;background:none;border:none;font-size:1.4rem;color:var(--text-muted);cursor:pointer;width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:background .2s}
+.modal-close:hover{background:var(--light-green)}
+.modal-title{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:600;color:var(--primary);margin-bottom:6px}
+.modal-subtitle{font-size:.85rem;color:var(--text-muted);margin-bottom:24px}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:.82rem;font-weight:600;color:var(--text);margin-bottom:6px;letter-spacing:.3px}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:11px 15px;border:2px solid var(--border);border-radius:10px;font-size:.9rem;font-family:'DM Sans',sans-serif;color:var(--text);outline:none;transition:border-color .2s;background:#fff}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--primary)}
+.form-group textarea{resize:vertical;min-height:80px}
+.btn-primary{width:100%;padding:13px;background:var(--primary);color:#fff;border:none;border-radius:10px;font-size:.95rem;font-weight:600;font-family:'DM Sans',sans-serif;cursor:pointer;transition:background .2s;letter-spacing:.5px}
+.btn-primary:hover{background:var(--secondary)}
+.btn-secondary-outline{width:100%;padding:13px;background:transparent;color:var(--primary);border:2px solid var(--primary);border-radius:10px;font-size:.95rem;font-weight:600;font-family:'DM Sans',sans-serif;cursor:pointer;transition:all .2s;margin-top:10px}
+.btn-secondary-outline:hover{background:var(--primary);color:#fff}
+.switch-form{text-align:center;margin-top:16px;font-size:.85rem;color:var(--text-muted)}
+.switch-form a{color:var(--primary);font-weight:600;cursor:pointer}
+
+/* ===== PRODUCT DETAIL PAGE ===== */
+.product-detail{padding:24px 20px 60px;max-width:1100px;margin:0 auto}
+.back-btn{display:inline-flex;align-items:center;gap:8px;color:var(--primary);font-weight:500;font-size:.88rem;margin-bottom:24px;cursor:pointer;transition:opacity .2s}
+.back-btn:hover{opacity:.7}
+.pd-grid{display:grid;grid-template-columns:1fr;gap:36px}
+@media(min-width:768px){.pd-grid{grid-template-columns:1fr 1fr}}
+.pd-img-section{}
+.pd-main-img{width:100%;aspect-ratio:1;border-radius:16px;overflow:hidden;background:#f5f5f0;margin-bottom:12px}
+.pd-main-img img{width:100%;height:100%;object-fit:cover;transition:opacity .3s}
+.pd-thumbs{display:flex;gap:10px}
+.pd-thumb{width:70px;height:70px;border-radius:10px;overflow:hidden;cursor:pointer;border:2px solid transparent;transition:border-color .2s;flex-shrink:0}
+.pd-thumb.active{border-color:var(--primary)}
+.pd-thumb img{width:100%;height:100%;object-fit:cover}
+.pd-info .product-name{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:600;color:var(--primary);margin-bottom:8px;line-height:1.3}
+.pd-info .product-price{font-size:1.4rem;font-weight:600;color:var(--primary);margin-bottom:16px}
+.pd-desc{font-size:.88rem;line-height:1.8;color:var(--text-muted);margin-bottom:20px}
+.pd-desc.collapsed{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.see-more-btn{color:var(--primary);font-size:.85rem;font-weight:600;cursor:pointer;background:none;border:none;padding:0;margin-bottom:20px;display:block}
+.pd-benefits h3{font-size:.85rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.pd-benefits ul{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:24px}
+.pd-benefits li{display:flex;align-items:flex-start;gap:10px;font-size:.88rem;color:var(--text)}
+.pd-benefits li::before{content:'✓';color:var(--primary);font-weight:700;flex-shrink:0;margin-top:1px}
+.pd-action-btns{display:flex;gap:12px;flex-wrap:wrap}
+.pd-btn-cart{flex:1;padding:14px;border:2px solid var(--primary);background:transparent;color:var(--primary);border-radius:12px;font-size:.9rem;font-weight:600;transition:all .2s;min-width:120px;font-family:'DM Sans',sans-serif}
+.pd-btn-cart:hover{background:var(--primary);color:#fff}
+.pd-btn-buy{flex:1;padding:14px;background:var(--primary);color:#fff;border:2px solid var(--primary);border-radius:12px;font-size:.9rem;font-weight:600;transition:background .2s;min-width:120px;font-family:'DM Sans',sans-serif}
+.pd-btn-buy:hover{background:var(--secondary)}
+
+/* ===== CART PAGE ===== */
+.cart-page{padding:24px 20px 60px;max-width:900px;margin:0 auto}
+.cart-empty{text-align:center;padding:60px 20px}
+.cart-empty svg{width:60px;height:60px;stroke:var(--border);margin:0 auto 16px}
+.cart-empty p{font-size:1rem;color:var(--text-muted)}
+.cart-items{display:flex;flex-direction:column;gap:12px;margin-bottom:24px}
+.cart-item{background:#fff;border-radius:14px;padding:16px;display:flex;align-items:center;gap:14px;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+.cart-item-img{width:70px;height:70px;border-radius:10px;object-fit:cover;flex-shrink:0}
+.cart-item-info{flex:1}
+.cart-item-name{font-weight:600;font-size:.92rem;color:var(--primary);margin-bottom:4px}
+.cart-item-price{font-size:.88rem;color:var(--text-muted)}
+.cart-item-qty{display:flex;align-items:center;gap:8px;margin-top:8px}
+.qty-btn{width:26px;height:26px;border:1px solid var(--border);background:#fff;border-radius:6px;font-size:1rem;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .15s}
+.qty-btn:hover{background:var(--light-green)}
+.qty-num{font-size:.9rem;font-weight:600;min-width:20px;text-align:center}
+.cart-item-remove{background:none;border:none;color:var(--text-muted);cursor:pointer;padding:4px;transition:color .2s}
+.cart-item-remove:hover{color:#e05555}
+.cart-summary{background:#fff;border-radius:16px;padding:22px;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+.cart-summary-row{display:flex;justify-content:space-between;font-size:.9rem;margin-bottom:10px;color:var(--text-muted)}
+.cart-summary-row.total{font-size:1.05rem;font-weight:700;color:var(--primary);padding-top:10px;border-top:1px solid var(--border);margin-top:6px}
+.cart-summary .btn-primary{margin-top:16px}
+
+/* ===== WISHLIST PAGE ===== */
+.wishlist-page{padding:24px 20px 60px;max-width:1100px;margin:0 auto}
+
+/* ===== CHECKOUT ===== */
+.checkout-page{padding:24px 20px 60px;max-width:680px;margin:0 auto}
+.checkout-steps{display:flex;align-items:center;gap:0;margin-bottom:36px}
+.checkout-step{flex:1;text-align:center;position:relative}
+.checkout-step::after{content:'';position:absolute;top:16px;left:50%;right:-50%;height:2px;background:var(--border);z-index:-1}
+.checkout-step:last-child::after{display:none}
+.step-circle{width:32px;height:32px;border-radius:50%;border:2px solid var(--border);background:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 6px;font-size:.82rem;font-weight:600;color:var(--text-muted);transition:all .3s}
+.checkout-step.active .step-circle,.checkout-step.done .step-circle{background:var(--primary);border-color:var(--primary);color:#fff}
+.step-label{font-size:.72rem;color:var(--text-muted);font-weight:500;letter-spacing:.3px}
+.checkout-step.active .step-label{color:var(--primary);font-weight:600}
+.checkout-form-section{background:#fff;border-radius:16px;padding:26px;box-shadow:0 2px 12px rgba(0,0,0,.06);margin-bottom:16px}
+.checkout-form-section h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--primary);margin-bottom:20px;font-weight:600}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.payment-option{display:flex;align-items:center;gap:12px;padding:14px;border:2px solid var(--border);border-radius:12px;cursor:pointer;transition:border-color .2s;margin-bottom:10px}
+.payment-option:hover,.payment-option.selected{border-color:var(--primary);background:var(--light-green)}
+.payment-option input[type=radio]{accent-color:var(--primary)}
+.payment-label{font-size:.9rem;font-weight:500;color:var(--text)}
+.order-review-items{display:flex;flex-direction:column;gap:10px;margin-bottom:16px}
+.order-review-item{display:flex;align-items:center;gap:12px;font-size:.88rem}
+.order-review-item img{width:48px;height:48px;border-radius:8px;object-fit:cover;flex-shrink:0}
+
+/* ===== SUCCESS MODAL ===== */
+.success-modal .modal-box{text-align:center;padding:50px 36px}
+.success-icon{width:72px;height:72px;background:var(--light-green);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
+.success-icon svg{width:36px;height:36px;stroke:var(--primary)}
+.success-modal .modal-title{margin-bottom:10px}
+.success-modal p{font-size:.9rem;color:var(--text-muted);line-height:1.7;margin-bottom:24px}
+.order-id{font-size:.8rem;color:var(--accent);font-weight:600;margin-bottom:20px}
+
+/* ===== TOAST ===== */
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(100px);background:var(--primary);color:#fff;padding:12px 24px;border-radius:50px;font-size:.85rem;font-weight:500;z-index:9999;transition:transform .3s,opacity .3s;opacity:0;pointer-events:none;white-space:nowrap}
+.toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+
+/* ===== PAGE HEADING ===== */
+.page-heading{background:linear-gradient(135deg,var(--primary),var(--secondary));padding:36px 20px;text-align:center;color:#fff;margin-bottom:30px}
+.page-heading h1{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,4vw,2.2rem);font-weight:600;margin-bottom:6px}
+.page-heading p{font-size:.85rem;opacity:.75;letter-spacing:1.5px;text-transform:uppercase}
+
+/* ===== FOOTER PHONE LINK ===== */
+.footer-phone-link{display:inline-flex;align-items:center;gap:8px;color:rgba(255,255,255,.85);font-size:.88rem;font-weight:500;margin-bottom:16px;margin-top:4px;transition:color .2s;text-decoration:none}
+.footer-phone-link:hover{color:#9dc99e}
+.footer-phone-icon{width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .25s}
+.footer-phone-link:hover .footer-phone-icon{background:#4C6B47;border-color:#4C6B47}
+
+/* ===== BREADCRUMB ===== */
+.breadcrumb{display:flex;align-items:center;gap:6px;padding:14px 20px;background:var(--light-green);border-bottom:1px solid var(--border);font-size:.8rem;color:var(--text-muted);flex-wrap:wrap}
+.breadcrumb a{color:var(--primary);font-weight:500;cursor:pointer;transition:color .2s}
+.breadcrumb a:hover{color:var(--secondary)}
+.breadcrumb .bc-sep{color:var(--border);font-size:.75rem}
+.breadcrumb .bc-current{color:var(--text-muted);font-weight:400}
+.back-home-bar{display:flex;align-items:center;gap:10px;padding:10px 20px;background:#fff;border-bottom:1px solid var(--border);position:sticky;top:76px;z-index:99;box-shadow:0 1px 6px rgba(0,0,0,.04);flex-wrap:wrap}
+.back-home-btn{display:inline-flex;align-items:center;gap:6px;padding:7px 18px;background:var(--secondary);color:#fff;border-radius:50px;font-size:.78rem;font-weight:600;cursor:pointer;border:none;font-family:'DM Sans',sans-serif;transition:background .2s,transform .15s;letter-spacing:.4px;white-space:nowrap}
+.back-home-btn:hover{background:var(--accent);transform:translateX(-2px)}
+.back-home-btn svg{width:13px;height:13px}
+.bc-product-name{font-family:'Cormorant Garamond',serif;font-size:.9rem;color:var(--primary);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:180px}
+@media(max-width:480px){
+.header-inner{padding:7px 12px}
+.form-row{grid-template-columns:1fr}
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeInUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeInDown{from{opacity:0;transform:translateY(-22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeInLeft{from{opacity:0;transform:translateX(-32px)}to{opacity:1;transform:translateX(0)}}
+@keyframes fadeInRight{from{opacity:0;transform:translateX(32px)}to{opacity:1;transform:translateX(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes scaleIn{from{opacity:0;transform:scale(0.93)}to{opacity:1;transform:scale(1)}}
+@keyframes slideInUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+
+/* Base reveal state — elements start invisible */
+.rv{opacity:0;will-change:transform,opacity}
+/* Prevent flash on reduced-motion */
+@media(prefers-reduced-motion:reduce){
+  .rv,.rv.visible{opacity:1!important;transform:none!important;animation:none!important;transition:none!important}
+}
+
+/* Animate when .visible is added by JS */
+.rv.visible{animation-fill-mode:both;animation-timing-function:cubic-bezier(.22,.61,.36,1)}
+.rv-up.visible   {animation:fadeInUp   0.65s cubic-bezier(.22,.61,.36,1) both}
+.rv-down.visible {animation:fadeInDown 0.55s cubic-bezier(.22,.61,.36,1) both}
+.rv-left.visible {animation:fadeInLeft 0.6s  cubic-bezier(.22,.61,.36,1) both}
+.rv-right.visible{animation:fadeInRight 0.6s cubic-bezier(.22,.61,.36,1) both}
+.rv-fade.visible {animation:fadeIn     0.7s  ease both}
+.rv-scale.visible{animation:scaleIn    0.6s  cubic-bezier(.34,1.3,.64,1) both}
+.rv-slide.visible{animation:slideInUp  0.7s  cubic-bezier(.22,.61,.36,1) both}
+
+/* Stagger delays for sibling groups */
+.rv-d1{animation-delay:.08s}.rv-d2{animation-delay:.16s}.rv-d3{animation-delay:.24s}
+.rv-d4{animation-delay:.32s}.rv-d5{animation-delay:.40s}.rv-d6{animation-delay:.48s}
+
+.animate-in{animation:fadeInUp .5s ease forwards}
+
+.section-divider{width:60px;height:3px;background:linear-gradient(to right,var(--accent),var(--primary));margin:0 auto 20px;border-radius:2px}
+.section-divider.left{margin:0 0 20px}
+
+/* ===== PRELOADER ===== */
+#preloader{position:fixed;inset:0;background:#ffffff;display:flex;align-items:center;justify-content:center;flex-direction:column;z-index:99999;transition:opacity 0.7s ease,visibility 0.7s ease}
+#preloader.hidden{opacity:0;visibility:hidden;pointer-events:none}
+#preloader-inner{display:flex;flex-direction:column;align-items:center;gap:0}
+#preloader-logo{width:110px;height:110px;object-fit:contain;margin-bottom:16px}
+#preloader-brand{font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:700;color:#004225;letter-spacing:0.5px;line-height:1.2;margin-bottom:6px;text-align:center}
+#preloader-sub{font-family:'DM Sans',sans-serif;font-size:0.75rem;color:#6b6b6b;letter-spacing:2px;text-transform:uppercase;margin-bottom:22px;text-align:center}
+#preloader-bar-wrap{width:200px;height:3px;background:#e0e8e2;border-radius:99px;overflow:hidden;position:relative}
+#preloader-bar{height:100%;width:45%;background:linear-gradient(90deg,#004225,#4C6B47);border-radius:99px;position:absolute;left:0;animation:plBarSlide 1.1s cubic-bezier(.4,0,.2,1) 2 forwards}
+@keyframes plBarSlide{
+  0%{left:-45%;width:45%}
+  45%{left:55%;width:45%}
+  50%{left:100%;width:45%}
+  51%{left:-45%;width:45%}
+  95%{left:55%;width:45%}
+  100%{left:100%;width:45%}
+}
+</style>
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div id="preloader">
+  <div id="preloader-inner">
+    <img id="preloader-logo" src="https://i.imgur.com/AzOWZzB.png" alt="Namveda Ayurveda">
+    <div id="preloader-brand">Namveda Ayurveda</div>
+    <div id="preloader-sub">Loading Experience...</div>
+    <div id="preloader-bar-wrap">
+      <div id="preloader-bar"></div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  function hidePreloader(){
+    var pl=document.getElementById('preloader');
+    if(!pl)return;
+    pl.classList.add('hidden');
+    setTimeout(function(){if(pl&&pl.parentNode)pl.parentNode.removeChild(pl);},750);
+  }
+  // Bar animation is 2 passes × 1.1s = 2.2s total; hide after that + small buffer
+  var animDuration=2400;
+  function onReady(){
+    var remaining=animDuration-(Date.now()-startTime);
+    setTimeout(hidePreloader,Math.max(remaining,0));
+  }
+  var startTime=Date.now();
+  if(document.readyState==='complete'){
+    onReady();
+  } else {
+    window.addEventListener('load',onReady);
+    setTimeout(hidePreloader,5000); // hard fallback
+  }
+})();
+</script>
+
+<!-- HEADER -->
+<header id="header">
+  <div class="header-inner">
+    <div class="logo-area" onclick="showPage('home')" style="cursor:pointer">
+      <div class="logo-img-wrap">
+        <img src="https://i.imgur.com/AzOWZzB.png" alt="Namveda Ayurveda Logo">
+      </div>
+      <div class="logo-text">
+        <div class="brand-name">Namveda Ayurveda</div>
+        <div class="slogan">Naturally Pure Living</div>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button class="header-btn" onclick="showPage('wishlist')" title="Wishlist" aria-label="Wishlist">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="wishlist-icon"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </button>
+      <button class="header-btn" onclick="showPage('cart')" title="Cart" aria-label="Cart" style="position:relative">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        <span class="cart-badge" id="cart-count">0</span>
+      </button>
+      <button class="header-btn" onclick="openLogin()" title="Login" aria-label="Login">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- MAIN PAGES -->
+<div id="main">
+
+<!-- ====== HOME PAGE ====== -->
+<div id="page-home" class="page active">
+
+  <!-- Hero Search -->
+  <div class="hero-search">
+    <h1 class="rv rv-down">Pure Ayurvedic <span style="color:var(--accent);font-style:italic">Wellness</span></h1>
+    <p class="rv rv-fade rv-d1">Rooted in nature · Refined for you</p>
+    <div class="search-wrap rv rv-up rv-d2">
+      <input type="text" id="search-input" placeholder="Search for products…" autocomplete="off" oninput="handleSearch(this.value)" onfocus="handleSearch(this.value)">
+      <button onclick="doSearch()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button>
+      <div class="search-results" id="search-results"></div>
+    </div>
+  </div>
+
+  <!-- Categories -->
+  <div class="cat-section">
+    <h2 class="rv rv-up">Shop by <span style="color:var(--accent);font-style:italic">Category</span></h2>
+    <div class="section-divider rv rv-fade rv-d1"></div>
+    <div class="cat-track-wrap">
+      <div class="cat-track" id="cat-track">
+        <!-- items injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Banner -->
+  <div class="banner-section rv rv-scale">
+    <img src="https://i.imgur.com/fOGGonU.jpeg" alt="Namveda Ayurveda Banner" class="banner-img" loading="lazy">
+  </div>
+
+  <!-- Featured Products -->
+  <div class="products-section">
+    <div class="section-header">
+      <div>
+        <div class="section-title rv rv-left">Featured <span>Products</span></div>
+        <div class="section-divider left rv rv-fade rv-d1" style="margin-top:8px"></div>
+      </div>
+    </div>
+    <div class="products-grid" id="products-grid"></div>
+    <div class="view-more-wrap rv rv-up">
+      <a href="#" class="btn-view-more" onclick="showPage('shop');return false">View More Products</a>
+    </div>
+  </div>
+
+  <!-- FAQs -->
+  <div class="faq-section">
+    <div class="faq-inner">
+      <div class="section-title rv rv-up">Frequently Asked <span>Questions</span></div>
+      <div class="section-divider rv rv-fade rv-d1" style="background:linear-gradient(to right,rgba(255,255,255,.4),rgba(255,255,255,.1));margin-bottom:30px"></div>
+      <div id="faq-list"></div>
+    </div>
+  </div>
+
+  <!-- Testimonials -->
+  <div class="testimonials-section">
+    <div class="test-header">
+      <div class="section-title rv rv-up">What Our <span style="color:var(--accent);font-style:italic">Customers</span> Say</div>
+      <div class="section-divider rv rv-fade rv-d1" style="margin-top:8px"></div>
+    </div>
+    <div class="test-track-outer">
+      <div class="test-track" id="test-track"></div>
+    </div>
+  </div>
+
+  <!-- About Us -->
+  <div class="about-section">
+    <div class="about-inner">
+      <div class="about-img rv rv-left">
+        <img src="https://i.imgur.com/UwNihZW.png" alt="About Namveda Ayurveda" loading="lazy">
+      </div>
+      <div class="about-content rv rv-right">
+        <div class="section-title">About <span>Us</span></div>
+        <div class="section-divider left" style="margin-top:8px;margin-bottom:16px"></div>
+        <p class="about-text">Discover the power of nature with Namveda Ayurveda! Our expert Ayurvedic doctors bring decades of experience to provide you with premium, all-natural skin and hair care products. Formulated with the wisdom of ancient Ayurveda, our products help you achieve healthy, glowing skin and strong, nourished hair. Say goodbye to harmful chemicals and embrace gentle, natural care for your body every day.</p>
+        <ul class="about-points">
+          <li>Experience the power of nature with Namveda Ayurveda</li>
+          <li>Expert Ayurvedic doctors with decades of experience</li>
+          <li>Premium, all-natural skin and hair care products</li>
+          <li>Formulated using the wisdom of ancient Ayurveda</li>
+          <li>Promotes healthy, glowing skin and nourished hair</li>
+          <li>Free from harmful chemicals for gentle daily care</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo-area" style="margin-bottom:14px">
+          <div class="logo-img-wrap">
+            <img src="https://i.imgur.com/AzOWZzB.png" alt="Logo">
+          </div>
+          <div class="logo-text">
+            <div class="brand-name">Namveda Ayurveda</div>
+            <div class="slogan">Naturally Pure Living</div>
+          </div>
+        </div>
+        <p>Est. 2024 · Fine Avenue Phase 2, Kolar Road, Bhopal, Madhya Pradesh 462042</p>
+        <a href="tel:+918109665754" class="footer-phone-link">
+          <span class="footer-phone-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.16 6.16l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </span>
+          +91 8109665754
+        </a>
+        <div class="social-links">
+          <a href="https://www.instagram.com/namveda_ayurveda" target="_blank" class="social-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://wa.me/918109665754" target="_blank" class="social-link" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </a>
+        </div>
+        <a href="https://wa.me/c/918109665754" target="_blank" class="whatsapp-catalog" style="margin-top:12px;display:inline-flex">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          View WhatsApp Catalog
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#" onclick="showPage('home');return false">Home</a></li>
+          <li><a href="#" onclick="showPage('shop');return false">All Products</a></li>
+          <li><a href="#" onclick="filterCategory('Skincare');return false">Skincare</a></li>
+          <li><a href="#" onclick="filterCategory('Haircare');return false">Haircare</a></li>
+          <li><a href="#" onclick="filterCategory('Wellness & Detox');return false">Wellness & Detox</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#" onclick="showPage('home');document.querySelector('.about-section').scrollIntoView();return false">About Us</a></li>
+          <li><a href="tel:+918109665754">Contact Us</a></li>
+          <li><a href="https://wa.me/918109665754" target="_blank">WhatsApp Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#" onclick="showPolicyPage('Track your Orders');return false">Track Orders</a></li>
+          <li><a href="#" onclick="showPolicyPage('Return Policy');return false">Return Policy</a></li>
+          <li><a href="#" onclick="showPolicyPage('Privacy Policy');return false">Privacy Policy</a></li>
+          <li><a href="#" onclick="showPolicyPage('Store Policies');return false">Store Policies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p style="font-size:.9rem;color:rgba(255,255,255,.8);font-family:'Cormorant Garamond',serif;font-style:italic;margin-bottom:6px">Stay Connected with Namveda Ayurveda · Discover the power of natural care!</p>
+      <p>© 2024 Namveda Ayurveda. All rights reserved. | Bhopal, Madhya Pradesh</p>
+    </div>
+  </footer>
+
+</div><!-- /home page -->
+
+<!-- ====== SHOP PAGE ====== -->
+<div id="page-shop" class="page">
+  <div class="sub-page-nav">
+    <button class="btn-back-home" onclick="showPage('home')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+      Back to Home
+    </button>
+    <div class="sub-breadcrumb">
+      <a onclick="showPage('home')">Home</a>
+      <span class="bc-arrow">›</span>
+      <span class="bc-active" id="shop-breadcrumb">All Products</span>
+    </div>
+  </div>
+  <div class="page-heading">
+    <h1>Our Products</h1>
+    <p>All Natural · All Ayurvedic</p>
+  </div>
+  <div class="products-section" style="padding-top:0">
+    <div class="section-header">
+      <div class="section-title" id="shop-title">All <span>Products</span></div>
+      <button onclick="filterCategory('all')" style="background:none;border:1px solid var(--border);padding:6px 14px;border-radius:20px;font-size:.8rem;cursor:pointer;color:var(--text-muted)">Show All</button>
+    </div>
+    <div class="products-grid" id="shop-grid"></div>
+  </div>
+  <div id="shop-footer-wrap"></div>
+</div>
+
+<!-- ====== PRODUCT DETAIL PAGE ====== -->
+<div id="page-product" class="page">
+  <!-- Back nav bar with breadcrumb -->
+  <div class="back-home-bar" id="pd-nav-bar">
+    <button class="back-home-btn" onclick="goBack()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+      Back
+    </button>
+    <div class="breadcrumb" style="background:none;border:none;padding:0;flex:1">
+      <a onclick="showPage('home')">Home</a>
+      <span class="bc-sep">›</span>
+      <a onclick="showPage('shop')">Products</a>
+      <span class="bc-sep">›</span>
+      <span class="bc-current bc-product-name" id="pd-breadcrumb-name"></span>
+    </div>
+  </div>
+  <div class="product-detail" style="padding-top:20px">
+    <div class="pd-grid" id="pd-content"></div>
+  </div>
+  <div id="pd-footer-wrap"></div>
+</div>
+
+<!-- ====== CART PAGE ====== -->
+<div id="page-cart" class="page">
+  <div class="sub-page-nav">
+    <button class="btn-back-home" onclick="showPage('home')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+      Back to Home
+    </button>
+    <div class="sub-breadcrumb">
+      <a onclick="showPage('home')">Home</a>
+      <span class="bc-arrow">›</span>
+      <span class="bc-active">Your Cart</span>
+    </div>
+  </div>
+  <div class="page-heading">
+    <h1>Your Cart</h1>
+    <p>Review your items</p>
+  </div>
+  <div class="cart-page" id="cart-content"></div>
+  <div id="cart-footer-wrap"></div>
+</div>
+
+<!-- ====== WISHLIST PAGE ====== -->
+<div id="page-wishlist" class="page">
+  <div class="sub-page-nav">
+    <button class="btn-back-home" onclick="showPage('home')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+      Back to Home
+    </button>
+    <div class="sub-breadcrumb">
+      <a onclick="showPage('home')">Home</a>
+      <span class="bc-arrow">›</span>
+      <span class="bc-active">Wishlist</span>
+    </div>
+  </div>
+  <div class="page-heading">
+    <h1>Wishlist</h1>
+    <p>Your saved favourites</p>
+  </div>
+  <div class="wishlist-page">
+    <div class="products-grid" id="wishlist-grid"></div>
+    <div id="wishlist-empty" style="display:none;text-align:center;padding:60px 20px">
+      <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="var(--border)" stroke-width="1.5" style="margin:0 auto 16px"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      <p style="color:var(--text-muted)">Your wishlist is empty</p>
+    </div>
+  </div>
+  <div id="wish-footer-wrap"></div>
+</div>
+
+<!-- ====== CHECKOUT PAGE ====== -->
+<div id="page-checkout" class="page">
+  <div class="sub-page-nav">
+    <button class="btn-back-home" onclick="showPage('home')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+      Back to Home
+    </button>
+    <div class="sub-breadcrumb">
+      <a onclick="showPage('home')">Home</a>
+      <span class="bc-arrow">›</span>
+      <a onclick="showPage('cart')">Cart</a>
+      <span class="bc-arrow">›</span>
+      <span class="bc-active">Checkout</span>
+    </div>
+  </div>
+  <div class="page-heading">
+    <h1>Checkout</h1>
+    <p>Secure &amp; easy ordering</p>
+  </div>
+  <div class="checkout-page" id="checkout-content"></div>
+  <div id="checkout-footer-wrap"></div>
+</div>
+
+<!-- ====== POLICY PAGE ====== -->
+<div id="page-policy" class="page">
+  <div class="sub-page-nav">
+    <button class="btn-back-home" onclick="showPage('home')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+      Back to Home
+    </button>
+    <div class="sub-breadcrumb">
+      <a onclick="showPage('home')">Home</a>
+      <span class="bc-arrow">›</span>
+      <span class="bc-active" id="policy-breadcrumb">Policy</span>
+    </div>
+  </div>
+  <div class="page-heading" id="policy-heading"></div>
+  <div style="max-width:800px;margin:0 auto;padding:30px 20px 60px" id="policy-content"></div>
+  <div id="policy-footer-wrap"></div>
+</div>
+
+</div><!-- /main -->
+
+<!-- LOGIN MODAL -->
+<div class="modal-overlay" id="login-modal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('login-modal')">✕</button>
+    <div id="login-form-wrap">
+      <div class="modal-title">Welcome Back</div>
+      <div class="modal-subtitle">Login to your account</div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" id="login-email" placeholder="your@email.com">
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" id="login-pass" placeholder="••••••••">
+      </div>
+      <button class="btn-primary" onclick="doLogin()">Login</button>
+      <div class="switch-form">Don't have an account? <a onclick="toggleSignup()">Sign up</a></div>
+    </div>
+    <div id="signup-form-wrap" style="display:none">
+      <div class="modal-title">Create Account</div>
+      <div class="modal-subtitle">Join the Namveda family</div>
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" id="signup-name" placeholder="Your name">
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" id="signup-email" placeholder="your@email.com">
+      </div>
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" id="signup-phone" placeholder="+91 XXXXX XXXXX">
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" id="signup-pass" placeholder="••••••••">
+      </div>
+      <button class="btn-primary" onclick="doSignup()">Create Account</button>
+      <div class="switch-form">Already have an account? <a onclick="toggleSignup()">Login</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- SUCCESS MODAL -->
+<div class="modal-overlay success-modal" id="success-modal">
+  <div class="modal-box" style="text-align:center;padding:50px 36px">
+    <div class="success-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <div class="modal-title">Order Placed!</div>
+    <p style="margin:10px 0 16px;color:var(--text-muted);font-size:.9rem;line-height:1.7">Thank you for shopping with Namveda Ayurveda! Your order has been confirmed and will be delivered soon.</p>
+    <div class="order-id" id="order-id-text"></div>
+    <button class="btn-primary" onclick="closeModal('success-modal');showPage('home');clearCart()" style="max-width:200px;margin:0 auto">Continue Shopping</button>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script>
+// ======== DATA ========
+const products = [
+  {
+    id:1, name:"Chandan Soothe", category:"Skincare",
+    price:250, mrp:299,
+    images:["https://i.imgur.com/jwGh3eu.png","https://i.imgur.com/D3kJXpO.jpeg","https://i.imgur.com/clySwyH.jpeg"],
+    desc:"Chandan Soothe is a gentle face care product enriched with natural sandalwood. It helps calm the skin, reduces irritation, and leaves your face feeling soft and refreshed. This product is perfect for daily use, giving your skin a healthy glow and helping it stay smooth and comfortable throughout the day. Its natural ingredients work to protect the skin from dryness and stress caused by the environment.",
+    benefits:["Calms and refreshes the skin","Reduces irritation and redness","Softens and smoothens the skin","Gives a natural healthy glow","Suitable for all skin types","Gentle enough for daily use"]
+  },
+  {
+    id:2, name:"Mulethi Glow", category:"Skincare",
+    price:250, mrp:299,
+    images:["https://i.imgur.com/7IU1ewO.jpeg","https://i.imgur.com/U3VY2rR.jpeg","https://i.imgur.com/b3RJxSs.jpeg"],
+    desc:"Mulethi Glow is a face care product made with natural mulethi (licorice) extracts. It helps brighten the skin, reduce dark spots, and improve overall complexion. Regular use makes your skin look fresh, radiant, and healthy. It is gentle and suitable for all skin types, helping to keep your face smooth and glowing every day.",
+    benefits:["Brightens dull and tired skin","Reduces dark spots and uneven tone","Enhances natural glow","Softens and smoothens the skin","Suitable for all skin types","Gentle for daily use"]
+  },
+  {
+    id:3, name:"Suddhi Mitti", category:"Skincare",
+    price:250, mrp:299,
+    images:["https://i.imgur.com/KU2bjiu.jpeg","https://i.imgur.com/Vzyv82C.jpeg","https://i.imgur.com/VZ4q20s.jpeg"],
+    desc:"Suddhi Mitti is a natural face care product made with pure multani mitti (Fuller's Earth). It deeply cleanses the skin, removes dirt, oil, and impurities, and helps prevent acne and blemishes. Regular use keeps your skin fresh, smooth, and healthy. It is gentle and suitable for all skin types, giving your face a clean and refreshed feel every day.",
+    benefits:["Deeply cleanses and removes impurities","Absorbs excess oil and dirt","Helps prevent acne and blemishes","Leaves skin fresh, smooth, and healthy","Suitable for all skin types","Gentle for daily use"]
+  },
+  {
+    id:4, name:"Neem Clear", category:"Skincare",
+    price:250, mrp:299,
+    images:["https://i.imgur.com/9ofUhrW.jpeg","https://i.imgur.com/rytuGsd.jpeg","https://i.imgur.com/9Y5o5Dt.jpeg"],
+    desc:"Neem Clear is a natural face care product enriched with neem extracts, known for their antibacterial and purifying properties. It helps fight acne, reduces blemishes, and keeps your skin clear and healthy. Regular use makes your skin feel fresh, balanced, and naturally radiant. Gentle on all skin types, it is ideal for daily use to maintain clean and clear skin.",
+    benefits:["Fights acne and pimples","Reduces blemishes and dark spots","Purifies and cleanses the skin","Keeps skin fresh and balanced","Suitable for all skin types","Gentle for daily use"]
+  },
+  {
+    id:5, name:"Gulab Ras Refresh", category:"Skincare",
+    price:250, mrp:299,
+    images:["https://i.imgur.com/aLNkLiu.jpeg","https://i.imgur.com/ekvVOLP.jpeg","https://i.imgur.com/Ml0XUi1.png"],
+    desc:"Gulab Ras Refresh is a natural face care product infused with pure rose extracts. It hydrates and refreshes the skin, leaving it soft, smooth, and naturally glowing. Regular use helps calm the skin, reduce dryness, and maintain a healthy, radiant complexion. Gentle for all skin types, it can be used daily to feel refreshed and rejuvenated.",
+    benefits:["Hydrates and refreshes the skin","Softens and smoothens the face","Enhances natural glow","Calms and soothes the skin","Suitable for all skin types","Gentle for daily use"]
+  },
+  {
+    id:6, name:"Organic Shampoo (Variant 1)", category:"Haircare",
+    price:299, mrp:349,
+    images:["https://i.imgur.com/DR459rZ.jpeg","https://i.imgur.com/upA4Ee8.jpeg","https://i.imgur.com/QYafCuy.png"],
+    desc:"This Organic Shampoo is made with natural ingredients to gently cleanse and nourish your hair. It removes dirt and excess oil without stripping the hair of its natural moisture, leaving it soft, smooth, and manageable. Regular use strengthens the hair from root to tip and helps maintain a healthy scalp. Suitable for all hair types, it is ideal for daily hair care.",
+    benefits:["Gently cleanses and nourishes hair","Removes dirt and excess oil","Leaves hair soft, smooth, and manageable","Strengthens hair from root to tip","Maintains a healthy scalp","Suitable for all hair types"]
+  },
+  {
+    id:7, name:"Organic Shampoo (Variant 2)", category:"Haircare",
+    price:100, mrp:149,
+    images:["https://i.imgur.com/XTe9Ck9.jpeg","https://i.imgur.com/czESLvt.jpeg","https://i.imgur.com/ldw20q0.png"],
+    desc:"This Organic Shampoo Variant 2 is crafted with natural ingredients to gently cleanse, nourish, and revitalize your hair. It helps remove impurities and excess oil while keeping your hair hydrated and soft. Regular use promotes stronger, healthier hair and a balanced scalp. Suitable for all hair types, it is perfect for everyday use to keep your hair fresh and vibrant.",
+    benefits:["Gently cleanses and nourishes hair","Removes impurities and excess oil","Keeps hair soft, smooth, and hydrated","Promotes stronger, healthier hair","Maintains a balanced scalp","Suitable for all hair types"]
+  },
+  {
+    id:8, name:"Body Detox", category:"Wellness & Detox",
+    price:150, mrp:199,
+    images:["https://i.imgur.com/St2BYeS.jpeg","https://i.imgur.com/OekGaSj.jpeg","https://i.imgur.com/65bOwlP.jpeg"],
+    desc:"Body Detox is a natural wellness product designed to help cleanse and refresh your body from within. It supports the removal of toxins, improves digestion, and boosts overall energy and vitality. Regular use helps you feel lighter, healthier, and more active. Made with gentle, natural ingredients, it is safe and suitable for daily use as part of your wellness routine.",
+    benefits:["Helps cleanse and detoxify the body","Supports healthy digestion","Boosts energy and vitality","Promotes a lighter and healthier feeling","Made with gentle natural ingredients","Suitable for daily use"]
+  },
+  {
+    id:9, name:"Manjistha Detox", category:"Wellness & Detox",
+    price:250, mrp:299,
+    images:["https://i.imgur.com/WWi50CN.png","https://i.imgur.com/Xm5x3OD.jpeg","https://i.imgur.com/zXyBtQi.jpeg"],
+    desc:"Manjistha Detox is a natural wellness product made with pure manjistha (Indian madder) extracts. It helps purify the body, supports healthy skin, and removes toxins naturally. Regular use promotes overall well-being, a clear complexion, and a feeling of lightness and vitality. Gentle and safe, it is suitable for daily use as part of your detox routine.",
+    benefits:["Purifies the body naturally","Supports healthy, glowing skin","Helps remove toxins","Promotes overall well-being","Gives a feeling of lightness and vitality","Gentle and suitable for daily use"]
+  }
+];
+
+const faqs = [
+  {q:"Are these products suitable for all skin types?",a:"Yes, all our products are made with natural ingredients and are gentle enough for all skin types, including sensitive skin."},
+  {q:"How often should I use these products?",a:"Skincare and hair care products can be used daily, while wellness products like Body Detox can be used as part of your regular routine, ideally once a day."},
+  {q:"Are these products chemical-free?",a:"Our products are made primarily with natural ingredients. They are free from harsh chemicals, making them safe for regular use."},
+  {q:"Can I use multiple products together?",a:"Yes, you can combine skincare products in your daily routine. For example, you can use Chandan Soothe, Mulethi Glow, and Suddhi Mitti as per your skin needs. Hair and wellness products can also be used alongside your skincare routine."},
+  {q:"How long will it take to see results?",a:"Results may vary depending on your skin or hair condition, but most users notice improvements in softness, glow, and clarity within 2–3 weeks of regular use."}
+];
+
+const testimonials = [
+  {name:"Namrata Sen",age:25,gender:"female",loc:"Bhopal (M.P.)",text:"I'm thrilled with Namveda Ayurveda's organic shampoo! It's gentle, nourishing, and leaves my hair soft and shiny. The natural ingredients and subtle aroma are a big plus. Highly recommended for those seeking a chemical-free and effective shampoo.",rating:5},
+  {name:"Shubham Soni",age:28,gender:"male",loc:"Delhi",text:"Namveda Ayurveda's organic shampoo has been a game-changer for my hair and scalp. As someone who's always been skeptical about Ayurvedic products, I was blown away by the results. My hair feels stronger, thicker, and more manageable. +1 for the refresh smell.",rating:5},
+  {name:"Poornima Goyal",age:22,gender:"female",loc:"Cochin (Kerala)",text:"GAME-CHANGER! Namveda Ayurveda's organic shampoo transformed my hair from dull to divine! Soft, silky, and manageable - I'm OBSESSED! If you are looking for natural, effective products, this is it. Highly recommended for all my fellow college girls!",rating:5},
+  {name:"Priya Mehta",age:30,gender:"female",loc:"Mumbai (M.H.)",text:"I absolutely love Namveda Ayurveda's Chandan Soothe cream! It calms my skin instantly and leaves it soft and glowing. I feel confident using a product that is completely natural. Highly recommend for anyone with sensitive skin.",rating:5},
+  {name:"Rahul Verma",age:32,gender:"male",loc:"Jaipur (R.J.)",text:"The Organic Shampoo from Namveda Ayurveda is fantastic! My hair feels healthier, smoother, and more manageable. I've finally found a product without harsh chemicals that actually works.",rating:5},
+  {name:"Anita Sharma",age:27,gender:"female",loc:"Lucknow (U.P.)",text:"Mulethi Glow has transformed my skin! Dark spots and dullness have visibly reduced, and my face feels fresh every day. I'm so happy with the natural glow it gives.",rating:5},
+  {name:"Vikas Kapoor",age:35,gender:"male",loc:"Chandigarh (P.B.)",text:"Manjistha Detox has improved my overall wellness. I feel lighter, more energetic, and my skin looks healthier. A must-try for anyone looking to detox naturally.",rating:5},
+  {name:"Sangeeta Rao",age:29,gender:"female",loc:"Bangalore (K.A.)",text:"Gulab Ras Refresh is amazing! My skin feels hydrated, soft, and radiant. I love the natural rose fragrance, and it's so gentle that I use it every day.",rating:5}
+];
+
+const categories = [
+  {name:"Skincare",img:"https://i.imgur.com/Ber3Kv6.jpeg"},
+  {name:"Haircare",img:"https://i.imgur.com/PPoK1R8.jpeg"},
+  {name:"Wellness & Detox",img:"https://i.imgur.com/VdP2Y73.jpeg"}
+];
+
+// ======== STATE ========
+let cart = JSON.parse(localStorage.getItem('nv_cart')||'[]');
+let wishlist = JSON.parse(localStorage.getItem('nv_wish')||'[]');
+let currentUser = JSON.parse(localStorage.getItem('nv_user')||'null');
+let prevPage = 'home';
+let checkoutStep = 1;
+let checkoutData = {};
+let currentFilter = 'all';
+
+// ======== UTILS ========
+function saveCart(){localStorage.setItem('nv_cart',JSON.stringify(cart));updateCartBadge()}
+function saveWish(){localStorage.setItem('nv_wish',JSON.stringify(wishlist))}
+function updateCartBadge(){
+  const total = cart.reduce((a,b)=>a+b.qty,0);
+  document.getElementById('cart-count').textContent=total;
+}
+function showToast(msg,dur=2500){
+  const t=document.getElementById('toast');
+  t.textContent=msg;t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),dur);
+}
+function openModal(id){document.getElementById(id).classList.add('open')}
+function closeModal(id){document.getElementById(id).classList.remove('open')}
+
+function showPage(pg){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  prevPage=document.querySelector('.page.active')?.id.replace('page-','') || 'home';
+  document.getElementById('page-'+pg).classList.add('active');
+  window.scrollTo(0,0);
+  if(pg==='cart')renderCart();
+  if(pg==='wishlist')renderWishlist();
+  if(pg==='shop')renderShopGrid(currentFilter);
+  if(pg==='checkout')renderCheckout(1);
+}
+function goBack(){showPage(prevPage||'home')}
+
+// ======== CATEGORY CAROUSEL ========
+function buildCatCarousel(){
+  const track=document.getElementById('cat-track');
+  // Build 4 full sets so we always have enough for seamless loop
+  const sets=4;
+  let html='';
+  for(let s=0;s<sets;s++){
+    categories.forEach(c=>{
+      html+=`<div class="cat-item" onclick="filterCategory('${c.name}')">
+        <div class="cat-circle"><img src="${c.img}" alt="${c.name}" loading="lazy"></div>
+        <span>${c.name}</span>
+      </div>`;
+    });
+  }
+  track.innerHTML=html;
+  // After images load, measure one set width and set CSS var for exact loop
+  requestAnimationFrame(()=>{
+    const oneSetWidth=track.scrollWidth/sets;
+    track.style.setProperty('--cat-offset',`-${oneSetWidth}px`);
+    // Duration: ~130px/s for a smooth moderate pace
+    const dur=Math.round(oneSetWidth/80);
+    track.style.setProperty('--cat-dur',`${dur}s`);
+    track.classList.add('animating');
+  });
+}
+
+// ======== PRODUCTS GRID ========
+function productCard(p,size=8){
+  const inWish=wishlist.includes(p.id);
+  return `<div class="product-card animate-in">
+    <div class="product-img-wrap" onclick="showProduct(${p.id})" style="cursor:pointer">
+      <img src="${p.images[0]}" alt="${p.name}" loading="lazy">
+      <button class="wishlist-btn ${inWish?'active':''}" onclick="event.stopPropagation();toggleWish(${p.id},this)" title="${inWish?'Remove from wishlist':'Add to wishlist'}">
+        <svg viewBox="0 0 24 24" fill="${inWish?'#e05555':'none'}" stroke="${inWish?'#e05555':'currentColor'}" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </button>
+    </div>
+    <div class="product-info">
+      <div class="product-name" onclick="showProduct(${p.id})" style="cursor:pointer">${p.name}</div>
+      <div class="product-desc">${p.desc}</div>
+      <div class="product-price">₹${p.price} <span style="text-decoration:line-through;font-size:.8rem;font-weight:400;color:var(--text-muted)">₹${p.mrp}</span></div>
+      <div class="product-btns">
+        <button class="btn-cart" onclick="addToCart(${p.id})">Add to Cart</button>
+        <button class="btn-buy" onclick="buyNow(${p.id})">Buy Now</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+function renderHomeProducts(){
+  const g=document.getElementById('products-grid');
+  g.innerHTML=products.map(p=>productCard(p)).join('');
+}
+
+function renderShopGrid(filter='all'){
+  currentFilter=filter;
+  const filtered=filter==='all'?products:products.filter(p=>p.category===filter);
+  document.getElementById('shop-title').innerHTML=filter==='all'?'All <span>Products</span>':`${filter} <span>Products</span>`;
+  const bc=document.getElementById('shop-breadcrumb');
+  if(bc) bc.textContent=filter==='all'?'All Products':filter;
+  document.getElementById('shop-grid').innerHTML=filtered.map(p=>productCard(p)).join('');
+}
+
+function filterCategory(cat){
+  currentFilter=cat;
+  showPage('shop');
+}
+
+// ======== PRODUCT DETAIL ========
+function showProduct(id){
+  const p=products.find(x=>x.id===id);
+  if(!p)return;
+  prevPage=document.querySelector('.page.active')?.id.replace('page-','') || 'home';
+  // Set breadcrumb
+  const bcName=document.getElementById('pd-breadcrumb-name');
+  if(bcName) bcName.textContent=p.name;
+  const pdHTML=`
+    <div class="pd-img-section">
+      <div class="pd-main-img"><img id="pd-main-img" src="${p.images[0]}" alt="${p.name}"></div>
+      <div class="pd-thumbs">
+        ${p.images.map((img,i)=>`<div class="pd-thumb ${i===0?'active':''}" onclick="selectThumb(this,'${img}')"><img src="${img}" alt="" loading="lazy"></div>`).join('')}
+      </div>
+    </div>
+    <div class="pd-info">
+      <div style="font-size:.75rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:6px">${p.category}</div>
+      <div class="product-name">${p.name}</div>
+      <div class="product-price" style="font-size:1.4rem;margin:12px 0">₹${p.price} <span style="text-decoration:line-through;font-size:1rem;font-weight:400;color:var(--text-muted)">₹${p.mrp}</span></div>
+      <div class="pd-desc collapsed" id="pd-desc">${p.desc}</div>
+      <button class="see-more-btn" id="see-more-btn" onclick="toggleSeeMore()">See More ▾</button>
+      <div class="pd-benefits">
+        <h3>Key Benefits</h3>
+        <ul>${p.benefits.map(b=>`<li>${b}</li>`).join('')}</ul>
+      </div>
+      <div class="pd-action-btns">
+        <button class="pd-btn-cart" onclick="addToCart(${p.id});showToast('Added to cart!')">Add to Cart</button>
+        <button class="pd-btn-buy" onclick="buyNow(${p.id})">Buy Now</button>
+      </div>
+      <div style="margin-top:16px;display:flex;align-items:center;gap:8px">
+        <button class="wishlist-btn ${wishlist.includes(p.id)?'active':''}" id="pd-wish-btn" onclick="toggleWish(${p.id},this)" style="position:relative;top:0;right:0;background:var(--light-green)">
+          <svg viewBox="0 0 24 24" fill="${wishlist.includes(p.id)?'#e05555':'none'}" stroke="${wishlist.includes(p.id)?'#e05555':'currentColor'}" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </button>
+        <span style="font-size:.82rem;color:var(--text-muted)">${wishlist.includes(p.id)?'Saved to Wishlist':'Save to Wishlist'}</span>
+      </div>
+    </div>`;
+  document.getElementById('pd-content').innerHTML=pdHTML;
+  showPage('product');
+}
+
+function selectThumb(el,src){
+  document.querySelectorAll('.pd-thumb').forEach(t=>t.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('pd-main-img').src=src;
+}
+
+function toggleSeeMore(){
+  const desc=document.getElementById('pd-desc');
+  const btn=document.getElementById('see-more-btn');
+  if(desc.classList.toggle('collapsed')){btn.textContent='See More ▾'}
+  else{btn.textContent='See Less ▴'}
+}
+
+// ======== CART ========
+function addToCart(id){
+  const p=products.find(x=>x.id===id);
+  if(!p)return;
+  const ex=cart.find(c=>c.id===id);
+  if(ex){ex.qty++}else{cart.push({id,qty:1})}
+  saveCart();
+  showToast(`${p.name} added to cart!`);
+}
+
+function removeFromCart(id){
+  cart=cart.filter(c=>c.id!==id);
+  saveCart();
+  renderCart();
+}
+
+function updateQty(id,delta){
+  const item=cart.find(c=>c.id===id);
+  if(!item)return;
+  item.qty+=delta;
+  if(item.qty<1)return removeFromCart(id);
+  saveCart();
+  renderCart();
+}
+
+function clearCart(){cart=[];saveCart()}
+
+function getCartTotal(){
+  return cart.reduce((sum,c)=>{
+    const p=products.find(x=>x.id===c.id);
+    return sum+(p?p.price*c.qty:0);
+  },0);
+}
+
+function renderCart(){
+  const el=document.getElementById('cart-content');
+  if(cart.length===0){
+    el.innerHTML=`<div class="cart-empty">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+      <p>Your cart is empty</p>
+      <button class="btn-primary" style="max-width:200px;margin:20px auto 0" onclick="showPage('shop')">Shop Now</button>
+    </div>`;
+    return;
+  }
+  const total=getCartTotal();
+  const itemsHTML=cart.map(c=>{
+    const p=products.find(x=>x.id===c.id);
+    if(!p)return '';
+    return `<div class="cart-item">
+      <img class="cart-item-img" src="${p.images[0]}" alt="${p.name}">
+      <div class="cart-item-info">
+        <div class="cart-item-name">${p.name}</div>
+        <div class="cart-item-price">₹${p.price} each</div>
+        <div class="cart-item-qty">
+          <button class="qty-btn" onclick="updateQty(${p.id},-1)">−</button>
+          <span class="qty-num">${c.qty}</span>
+          <button class="qty-btn" onclick="updateQty(${p.id},1)">+</button>
+        </div>
+      </div>
+      <div style="text-align:right">
+        <div style="font-weight:600;color:var(--primary);margin-bottom:8px">₹${p.price*c.qty}</div>
+        <button class="cart-item-remove" onclick="removeFromCart(${p.id})" title="Remove">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/></svg>
+        </button>
+      </div>
+    </div>`;
+  }).join('');
+  el.innerHTML=`
+    <div class="cart-items">${itemsHTML}</div>
+    <div class="cart-summary">
+      <div class="cart-summary-row"><span>Subtotal</span><span>₹${total}</span></div>
+      <div class="cart-summary-row"><span>Delivery</span><span style="color:var(--accent)">Free</span></div>
+      <div class="cart-summary-row total"><span>Total</span><span>₹${total}</span></div>
+      <button class="btn-primary" onclick="showPage('checkout')">Proceed to Checkout →</button>
+    </div>`;
+}
+
+// ======== WISHLIST ========
+function toggleWish(id,btn){
+  if(wishlist.includes(id)){
+    wishlist=wishlist.filter(x=>x!==id);
+    if(btn){btn.classList.remove('active');btn.querySelector('svg').setAttribute('fill','none');btn.querySelector('svg').setAttribute('stroke','currentColor')}
+    showToast('Removed from wishlist');
+  } else {
+    wishlist.push(id);
+    if(btn){btn.classList.add('active');btn.querySelector('svg').setAttribute('fill','#e05555');btn.querySelector('svg').setAttribute('stroke','#e05555')}
+    showToast('Added to wishlist!');
+  }
+  saveWish();
+  if(document.getElementById('page-wishlist').classList.contains('active'))renderWishlist();
+}
+
+function renderWishlist(){
+  const g=document.getElementById('wishlist-grid');
+  const empty=document.getElementById('wishlist-empty');
+  if(wishlist.length===0){g.innerHTML='';empty.style.display='block';return}
+  empty.style.display='none';
+  const items=wishlist.map(id=>products.find(p=>p.id===id)).filter(Boolean);
+  g.innerHTML=items.map(p=>productCard(p)).join('');
+}
+
+// ======== SEARCH ========
+function handleSearch(val){
+  const res=document.getElementById('search-results');
+  if(!val.trim()){res.classList.remove('show');return}
+  const matches=products.filter(p=>p.name.toLowerCase().includes(val.toLowerCase())||p.category.toLowerCase().includes(val.toLowerCase()));
+  if(matches.length===0){res.innerHTML='<div style="padding:16px 20px;font-size:.85rem;color:var(--text-muted)">No products found</div>';res.classList.add('show');return}
+  res.innerHTML=matches.map(p=>`<div class="search-result-item" onclick="res_click(${p.id})">
+    <img src="${p.images[0]}" alt="${p.name}">
+    <div><div class="sr-name">${p.name}</div><div class="sr-price">₹${p.price} · ${p.category}</div></div>
+  </div>`).join('');
+  res.classList.add('show');
+}
+function res_click(id){
+  document.getElementById('search-results').classList.remove('show');
+  document.getElementById('search-input').value='';
+  showProduct(id);
+}
+function doSearch(){
+  const val=document.getElementById('search-input').value;
+  handleSearch(val);
+}
+document.addEventListener('click',e=>{
+  if(!e.target.closest('.search-wrap'))document.getElementById('search-results').classList.remove('show');
+});
+
+// ======== FAQ ========
+function buildFAQ(){
+  const el=document.getElementById('faq-list');
+  el.innerHTML=faqs.map((f,i)=>`
+    <div class="faq-item" id="faq-${i}">
+      <div class="faq-q" onclick="toggleFaq(${i})" role="button" aria-expanded="false" aria-controls="faq-ans-${i}" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')toggleFaq(${i})">
+        <span class="faq-q-text">${f.q}</span>
+        <span class="faq-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </div>
+      <div class="faq-a" id="faq-ans-${i}">${f.a}</div>
+    </div>`).join('');
+}
+function toggleFaq(i){
+  const item=document.getElementById('faq-'+i);
+  const isOpen=item.classList.toggle('open');
+  const btn=item.querySelector('.faq-q');
+  if(btn) btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+}
+
+// ======== TESTIMONIALS ========
+function buildTestimonials(){
+  const track=document.getElementById('test-track');
+  const items=[...testimonials,...testimonials];
+  track.innerHTML=items.map(t=>`
+    <div class="test-card">
+      <div class="test-stars">${'★'.repeat(t.rating||5)}</div>
+      <div class="test-text">"${t.text}"</div>
+      <div class="test-author-name">${t.name}</div>
+      <div class="test-author-info">${t.age} · ${t.gender} · ${t.loc}</div>
+    </div>`).join('');
+}
+
+// ======== CHECKOUT ========
+function buyNow(id){
+  const p=products.find(x=>x.id===id);
+  if(!p)return;
+  addToCart(id);
+  showPage('checkout');
+}
+
+function renderCheckout(step){
+  checkoutStep=step;
+  const el=document.getElementById('checkout-content');
+  const stepsHTML=`
+    <div class="checkout-steps">
+      <div class="checkout-step ${step>=1?'active':''} ${step>1?'done':''}">
+        <div class="step-circle">${step>1?'✓':'1'}</div>
+        <div class="step-label">Address</div>
+      </div>
+      <div class="checkout-step ${step>=2?'active':''} ${step>2?'done':''}">
+        <div class="step-circle">${step>2?'✓':'2'}</div>
+        <div class="step-label">Payment</div>
+      </div>
+      <div class="checkout-step ${step>=3?'active':''}">
+        <div class="step-circle">3</div>
+        <div class="step-label">Review</div>
+      </div>
+    </div>`;
+  if(step===1){
+    el.innerHTML=stepsHTML+`
+      <div class="checkout-form-section">
+        <h3>Delivery Address</h3>
+        <div class="form-group"><label>Full Name</label><input id="co-name" value="${currentUser?.name||''}" placeholder="Your full name"></div>
+        <div class="form-row">
+          <div class="form-group"><label>Phone</label><input id="co-phone" type="tel" placeholder="+91 XXXXX XXXXX"></div>
+          <div class="form-group"><label>Email</label><input id="co-email" type="email" placeholder="email@example.com"></div>
+        </div>
+        <div class="form-group"><label>Address Line</label><input id="co-addr" placeholder="House no, street, area"></div>
+        <div class="form-row">
+          <div class="form-group"><label>City</label><input id="co-city" placeholder="City"></div>
+          <div class="form-group"><label>State</label><input id="co-state" placeholder="State"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Pincode</label><input id="co-pin" placeholder="462042"></div>
+          <div class="form-group"><label>Landmark (optional)</label><input id="co-land" placeholder="Near…"></div>
+        </div>
+      </div>
+      <button class="btn-primary" onclick="coNext1()">Continue to Payment →</button>`;
+  } else if(step===2){
+    el.innerHTML=stepsHTML+`
+      <div class="checkout-form-section">
+        <h3>Select Payment Method</h3>
+        <div class="payment-option selected" id="pm-upi" onclick="selectPM('upi')">
+          <input type="radio" name="pm" checked> <span class="payment-label">UPI (Google Pay, PhonePe, Paytm)</span>
+        </div>
+        <div class="payment-option" id="pm-card" onclick="selectPM('card')">
+          <input type="radio" name="pm"> <span class="payment-label">Credit / Debit Card</span>
+        </div>
+        <div class="payment-option" id="pm-nb" onclick="selectPM('nb')">
+          <input type="radio" name="pm"> <span class="payment-label">Net Banking</span>
+        </div>
+        <div class="payment-option" id="pm-cod" onclick="selectPM('cod')">
+          <input type="radio" name="pm"> <span class="payment-label">Cash on Delivery</span>
+        </div>
+        <div id="pm-upi-field" style="margin-top:14px">
+          <div class="form-group"><label>UPI ID</label><input id="co-upi" placeholder="yourname@upi"></div>
+        </div>
+      </div>
+      <div style="display:flex;gap:12px">
+        <button class="btn-secondary-outline" style="margin:0" onclick="renderCheckout(1)">← Back</button>
+        <button class="btn-primary" onclick="coNext2()">Review Order →</button>
+      </div>`;
+    checkoutData.pm='upi';
+  } else if(step===3){
+    const total=getCartTotal();
+    const itemsHTML=cart.map(c=>{
+      const p=products.find(x=>x.id===c.id);
+      return `<div class="order-review-item"><img src="${p.images[0]}" alt="${p.name}"><div><div style="font-weight:600">${p.name}</div><div style="color:var(--text-muted)">Qty: ${c.qty} × ₹${p.price}</div></div><div style="margin-left:auto;font-weight:600">₹${p.price*c.qty}</div></div>`;
+    }).join('');
+    el.innerHTML=stepsHTML+`
+      <div class="checkout-form-section">
+        <h3>Order Summary</h3>
+        <div class="order-review-items">${itemsHTML}</div>
+        <div style="border-top:1px solid var(--border);padding-top:12px">
+          <div style="display:flex;justify-content:space-between;font-size:.9rem;color:var(--text-muted);margin-bottom:6px"><span>Subtotal</span><span>₹${total}</span></div>
+          <div style="display:flex;justify-content:space-between;font-size:.9rem;color:var(--text-muted);margin-bottom:6px"><span>Delivery</span><span style="color:var(--accent)">Free</span></div>
+          <div style="display:flex;justify-content:space-between;font-weight:700;color:var(--primary);font-size:1.05rem;margin-top:8px;padding-top:8px;border-top:1px solid var(--border)"><span>Total</span><span>₹${total}</span></div>
+        </div>
+      </div>
+      <div class="checkout-form-section" style="font-size:.88rem;color:var(--text-muted);line-height:1.8">
+        <h3>Delivery to</h3>
+        <p>${checkoutData.name||''} · ${checkoutData.phone||''}<br>${checkoutData.addr||''}, ${checkoutData.city||''}, ${checkoutData.state||''} - ${checkoutData.pin||''}</p>
+        <p style="margin-top:8px">Payment: ${checkoutData.pm==='upi'?'UPI':checkoutData.pm==='card'?'Credit/Debit Card':checkoutData.pm==='nb'?'Net Banking':'Cash on Delivery'}</p>
+      </div>
+      <div style="display:flex;gap:12px">
+        <button class="btn-secondary-outline" style="margin:0" onclick="renderCheckout(2)">← Back</button>
+        <button class="btn-primary" onclick="placeOrder()">Place Order ✓</button>
+      </div>`;
+  }
+}
+
+function selectPM(pm){
+  ['upi','card','nb','cod'].forEach(id=>document.getElementById('pm-'+id)?.classList.remove('selected'));
+  document.getElementById('pm-'+pm)?.classList.add('selected');
+  checkoutData.pm=pm;
+  const upiField=document.getElementById('pm-upi-field');
+  if(upiField)upiField.style.display=pm==='upi'?'block':'none';
+}
+
+function coNext1(){
+  const name=document.getElementById('co-name').value;
+  const phone=document.getElementById('co-phone').value;
+  const addr=document.getElementById('co-addr').value;
+  const city=document.getElementById('co-city').value;
+  const state=document.getElementById('co-state').value;
+  const pin=document.getElementById('co-pin').value;
+  if(!name||!phone||!addr||!city||!state||!pin){showToast('Please fill all required fields');return}
+  checkoutData={...checkoutData,name,phone,addr,city,state,pin,email:document.getElementById('co-email').value,land:document.getElementById('co-land').value};
+  renderCheckout(2);
+}
+function coNext2(){renderCheckout(3)}
+
+function placeOrder(){
+  const orderId='NV'+Date.now().toString().slice(-8);
+  document.getElementById('order-id-text').textContent='Order ID: '+orderId;
+  openModal('success-modal');
+}
+
+// ======== LOGIN ========
+function openLogin(){openModal('login-modal')}
+function toggleSignup(){
+  document.getElementById('login-form-wrap').style.display=document.getElementById('login-form-wrap').style.display==='none'?'block':'none';
+  document.getElementById('signup-form-wrap').style.display=document.getElementById('signup-form-wrap').style.display==='none'?'block':'none';
+}
+function doLogin(){
+  const email=document.getElementById('login-email').value;
+  const pass=document.getElementById('login-pass').value;
+  if(!email||!pass){showToast('Please enter email and password');return}
+  currentUser={email,name:email.split('@')[0]};
+  localStorage.setItem('nv_user',JSON.stringify(currentUser));
+  closeModal('login-modal');
+  showToast('Welcome back, '+currentUser.name+'!');
+}
+function doSignup(){
+  const name=document.getElementById('signup-name').value;
+  const email=document.getElementById('signup-email').value;
+  const pass=document.getElementById('signup-pass').value;
+  if(!name||!email||!pass){showToast('Please fill all fields');return}
+  currentUser={name,email};
+  localStorage.setItem('nv_user',JSON.stringify(currentUser));
+  closeModal('login-modal');
+  showToast('Account created! Welcome, '+name+'!');
+}
+
+// Close modal on overlay click
+document.querySelectorAll('.modal-overlay').forEach(m=>{
+  m.addEventListener('click',e=>{if(e.target===m)m.classList.remove('open')});
+});
+
+// ======== POLICY PAGES ========
+const policies={
+  'Return Policy':`<h2 style="font-family:'Cormorant Garamond',serif;color:var(--primary);font-size:1.8rem;margin-bottom:20px">Return Policy</h2><p style="line-height:1.8;color:var(--text-muted)">At Namveda Ayurveda, we want you to be completely satisfied with your purchase. If for any reason you are not happy, you may return unopened products within <strong>7 days</strong> of delivery. To initiate a return, please contact us via WhatsApp at +91 8109665754 or email us. Refunds are processed within 5-7 business days after we receive the returned product. Please note that opened or used products cannot be returned due to hygiene reasons, unless they are defective.</p>`,
+  'Privacy Policy':`<h2 style="font-family:'Cormorant Garamond',serif;color:var(--primary);font-size:1.8rem;margin-bottom:20px">Privacy Policy</h2><p style="line-height:1.8;color:var(--text-muted)">Your privacy is important to us. Namveda Ayurveda collects personal information (name, email, phone, address) solely to process your orders and provide customer support. We do not sell, trade, or share your information with third parties. Our website may use cookies to improve user experience. By using our website, you consent to our privacy practices. For any concerns, contact us at +91 8109665754.</p>`,
+  'Store Policies':`<h2 style="font-family:'Cormorant Garamond',serif;color:var(--primary);font-size:1.8rem;margin-bottom:20px">Store Policies</h2><p style="line-height:1.8;color:var(--text-muted)">Namveda Ayurveda strives to deliver premium natural products safely and promptly. All orders are processed within 1-2 business days. We offer free delivery on all orders across India. Prices are inclusive of all taxes. Products are shipped in secure packaging to maintain quality. For bulk orders or special enquiries, contact us directly via WhatsApp at +91 8109665754.</p>`,
+  'Track your Orders':`<h2 style="font-family:'Cormorant Garamond',serif;color:var(--primary);font-size:1.8rem;margin-bottom:20px">Track Your Orders</h2><p style="line-height:1.8;color:var(--text-muted)">To track your order, please reach out to us via WhatsApp at <a href="https://wa.me/918109665754" style="color:var(--primary);font-weight:600">+91 8109665754</a> with your Order ID. We will provide you with real-time updates on your delivery status. Typically, orders are delivered within 5-7 business days after dispatch.</p>`
+};
+function showPolicyPage(title){
+  document.getElementById('policy-heading').innerHTML=`<h1>${title}</h1>`;
+  const bc=document.getElementById('policy-breadcrumb');
+  if(bc) bc.textContent=title;
+  document.getElementById('policy-content').innerHTML=(policies[title]||`<p style="color:var(--text-muted)">Content coming soon.</p>`)+`<button onclick="showPage('home')" class="btn-primary" style="max-width:200px;margin-top:30px">Back to Home</button>`;
+  showPage('policy');
+}
+
+// ======== SHARED FOOTER TEMPLATE ========
+function getFooterHTML(){
+  return `<footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo-area" onclick="showPage('home')" style="cursor:pointer;margin-bottom:14px">
+          <div class="logo-img-wrap">
+            <img src="https://i.imgur.com/AzOWZzB.png" alt="Logo">
+          </div>
+          <div class="logo-text">
+            <div class="brand-name">Namveda Ayurveda</div>
+            <div class="slogan">Naturally Pure Living</div>
+          </div>
+        </div>
+        <p>Est. 2024 · Fine Avenue Phase 2, Kolar Road,<br>Bhopal, Madhya Pradesh 462042</p>
+        <a href="tel:+918109665754" class="footer-phone-link">
+          <span class="footer-phone-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.16 6.16l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </span>
+          +91 8109665754
+        </a>
+        <div class="social-links">
+          <a href="https://www.instagram.com/namveda_ayurveda" target="_blank" class="social-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://wa.me/918109665754" target="_blank" class="social-link" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </a>
+        </div>
+        <a href="https://wa.me/c/918109665754" target="_blank" class="whatsapp-catalog" style="margin-top:12px;display:inline-flex">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          View WhatsApp Catalog
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#" onclick="showPage('home');return false">Home</a></li>
+          <li><a href="#" onclick="showPage('shop');return false">All Products</a></li>
+          <li><a href="#" onclick="filterCategory('Skincare');return false">Skincare</a></li>
+          <li><a href="#" onclick="filterCategory('Haircare');return false">Haircare</a></li>
+          <li><a href="#" onclick="filterCategory('Wellness &amp; Detox');return false">Wellness &amp; Detox</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#" onclick="showPage('home');setTimeout(()=>document.querySelector('.about-section').scrollIntoView({behavior:'smooth'}),100);return false">About Us</a></li>
+          <li><a href="tel:+918109665754">Contact Us</a></li>
+          <li><a href="https://wa.me/918109665754" target="_blank">WhatsApp Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#" onclick="showPolicyPage('Track your Orders');return false">Track Orders</a></li>
+          <li><a href="#" onclick="showPolicyPage('Return Policy');return false">Return Policy</a></li>
+          <li><a href="#" onclick="showPolicyPage('Privacy Policy');return false">Privacy Policy</a></li>
+          <li><a href="#" onclick="showPolicyPage('Store Policies');return false">Store Policies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p style="font-size:.9rem;color:rgba(255,255,255,.8);font-family:'Cormorant Garamond',serif;font-style:italic;margin-bottom:6px">Stay Connected with Namveda Ayurveda · Discover the power of natural care!</p>
+      <p>© 2024 Namveda Ayurveda. All rights reserved. | Bhopal, Madhya Pradesh</p>
+    </div>
+  </footer>`;
+}
+
+function injectFooters(){
+  const footerWrapIds=['shop-footer-wrap','pd-footer-wrap','cart-footer-wrap','wish-footer-wrap','checkout-footer-wrap','policy-footer-wrap'];
+  footerWrapIds.forEach(id=>{
+    const el=document.getElementById(id);
+    if(el) el.innerHTML=getFooterHTML();
+  });
+}
+
+// ======== INIT ========
+function init(){
+  buildCatCarousel();
+  renderHomeProducts();
+  buildFAQ();
+  buildTestimonials();
+  updateCartBadge();
+  injectFooters();
+}
+
+init();
+
+// ======== CAROUSEL TOUCH/DRAG SUPPORT ========
+(function(){
+  function addDragSwipe(el, getOffset, onEnd){
+    let isDragging=false, startX=0, startOffset=0, velX=0, lastX=0, lastT=0;
+
+    function start(x){
+      isDragging=true;
+      startX=x; lastX=x; lastT=Date.now(); velX=0;
+      startOffset=getOffset(el);
+      el.style.animationPlayState='paused';
+      el.style.animation='none';
+      el.style.transition='none';
+      el.style.transform='translateX('+startOffset+'px)';
+    }
+    function move(x){
+      if(!isDragging)return;
+      const now=Date.now(), dt=now-lastT||1;
+      velX=(x-lastX)/dt*16;
+      lastX=x; lastT=now;
+      el.style.transform='translateX('+(startOffset+(x-startX))+'px)';
+    }
+    function end(){
+      if(!isDragging)return;
+      isDragging=false;
+      const off=startOffset+(lastX-startX)+velX*8;
+      el.style.transition='transform 0.36s cubic-bezier(.25,.46,.45,.94)';
+      onEnd(el, off);
+      setTimeout(()=>{ el.style.transition=''; },420);
+    }
+    el.addEventListener('touchstart',e=>{if(e.touches.length===1)start(e.touches[0].clientX);},{passive:true});
+    el.addEventListener('touchmove',e=>{if(isDragging){e.preventDefault();move(e.touches[0].clientX);}},{passive:false});
+    el.addEventListener('touchend',end,{passive:true});
+    el.addEventListener('touchcancel',end,{passive:true});
+    el.addEventListener('mousedown',e=>{start(e.clientX);e.preventDefault();});
+    window.addEventListener('mousemove',e=>{if(isDragging)move(e.clientX);});
+    window.addEventListener('mouseup',()=>{if(isDragging)end();});
+    el.style.userSelect='none';
+    el.style.webkitUserSelect='none';
+  }
+
+  function getTranslateX(el){
+    const mat=new DOMMatrix(window.getComputedStyle(el).transform);
+    return mat.m41;
+  }
+
+  function initCatSwipe(){
+    const track=document.getElementById('cat-track');
+    if(!track)return;
+    addDragSwipe(track, getTranslateX, function(el, off){
+      const sets=4, oneSet=el.scrollWidth/sets;
+      let clamped=(((-off)%oneSet)+oneSet)%oneSet;
+      el.style.transform='translateX('+(-clamped)+'px)';
+      setTimeout(()=>{
+        const dur=parseFloat(el.style.getPropertyValue('--cat-dur')||'24');
+        const progress=clamped/oneSet;
+        el.style.setProperty('--cat-offset',`-${oneSet}px`);
+        el.style.animation=`catInfiniteScroll ${dur}s linear infinite`;
+        el.style.animationDelay=`-${progress*dur}s`;
+        el.style.transform='';
+      },400);
+    });
+  }
+
+  function initTestSwipe(){
+    const track=document.getElementById('test-track');
+    if(!track)return;
+    addDragSwipe(track, getTranslateX, function(el, off){
+      const half=el.scrollWidth/2;
+      let clamped=(((-off)%half)+half)%half;
+      el.style.transform='translateX('+(-clamped)+'px)';
+      setTimeout(()=>{
+        const dur=40, progress=clamped/half;
+        el.style.animation=`testScroll ${dur}s linear infinite`;
+        el.style.animationDelay=`-${progress*dur}s`;
+        el.style.transform='';
+      },400);
+    });
+  }
+
+  setTimeout(()=>{ initCatSwipe(); initTestSwipe(); },400);
+})();
+
+// ======== BOTTOM NAV ACTIVE STATE ========
+(function(){
+  var tabs = document.querySelectorAll('.bnav-tab');
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      tabs.forEach(function(t){ t.classList.remove('active'); });
+      tab.classList.add('active');
+    });
+  });
+  // Home tab active by default
+  var homeTab = document.querySelector('.bnav-tab[data-tab="home"]');
+  if(homeTab) homeTab.classList.add('active');
+})();
+</script>
+
+<!-- ===== MOBILE BOTTOM NAV BAR ===== -->
+<nav class="mobile-bottom-nav" id="mobileBottomNav" role="navigation" aria-label="Mobile bottom navigation">
+  <a href="#" class="bnav-tab" data-tab="home" aria-label="Home">
+    <span class="bnav-icon">
+      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+      </svg>
+    </span>
+    <span class="bnav-label">Home</span>
+  </a>
+  <a href="https://wa.me/918109665754" target="_blank" rel="noopener" class="bnav-tab" data-tab="contact" aria-label="Contact via WhatsApp">
+    <span class="bnav-icon">
+      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </span>
+    <span class="bnav-label">Contact</span>
+  </a>
+  <a href="https://wa.me/918109665754?text=Hello%2C%20I%20have%20a%20query%20about%20Namveda%20Ayurveda%20products." target="_blank" rel="noopener" class="bnav-tab" data-tab="message" aria-label="Send a message">
+    <span class="bnav-icon">
+      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12zM7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/>
+      </svg>
+    </span>
+    <span class="bnav-label">Message</span>
+  </a>
+  <a href="#faq" class="bnav-tab" data-tab="help" aria-label="Help and FAQ">
+    <span class="bnav-icon">
+      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/>
+      </svg>
+    </span>
+    <span class="bnav-label">Help</span>
+  </a>
+</nav>
+
+<style>
+/* ===== MOBILE BOTTOM NAV ===== */
+.mobile-bottom-nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* Show bottom nav on mobile */
+  .mobile-bottom-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: #004225;
+    height: 64px;
+    align-items: stretch;
+    justify-content: space-around;
+    box-shadow: 0 -2px 16px rgba(0, 66, 37, 0.35), 0 -1px 4px rgba(0,0,0,0.18);
+    border-top: 1px solid rgba(255,255,255,0.10);
+    /* iOS safe area */
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    padding-bottom: constant(safe-area-inset-bottom, 0px);
+  }
+
+  .bnav-tab {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    color: rgba(255, 255, 255, 0.65);
+    text-decoration: none;
+    padding: 8px 4px 6px;
+    position: relative;
+    transition: color 0.2s, background 0.2s;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    border-radius: 0;
+  }
+
+  .bnav-tab::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 32px;
+    height: 3px;
+    background: #8bc34a;
+    border-radius: 0 0 4px 4px;
+    transition: transform 0.25s cubic-bezier(.4,0,.2,1);
+  }
+
+  .bnav-tab.active {
+    color: #ffffff;
+    background: rgba(255,255,255,0.07);
+  }
+
+  .bnav-tab.active::before {
+    transform: translateX(-50%) scaleX(1);
+  }
+
+  .bnav-tab:active {
+    background: rgba(255,255,255,0.12);
+  }
+
+  .bnav-icon {
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.18s cubic-bezier(.4,0,.2,1);
+  }
+
+  .bnav-tab.active .bnav-icon {
+    transform: translateY(-1px);
+  }
+
+  .bnav-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+  }
+
+  /* WhatsApp green tint for Contact tab */
+  .bnav-tab[data-tab="contact"].active .bnav-icon {
+    color: #4ade80;
+  }
+
+  .bnav-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .bnav-tab.active .bnav-label {
+    font-weight: 600;
+  }
+
+  /* Push main content up to avoid overlap with bottom nav */
+  body {
+    padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px));
+  }
+}
+</style>
+
+<!-- ===== SITE-WIDE REVEAL ANIMATIONS ENGINE ===== -->
+<script>
+(function(){
+  'use strict';
+
+  // Selectors to auto-tag with reveal classes — excludes preloader & carousels
+  var AUTO_SELECTORS = [
+    // Section headings & dividers
+    '.section-title:not(.cat-section .section-title)',
+    '.section-divider',
+    '.page-heading h1',
+    '.page-heading p',
+    // Standalone content blocks
+    '.hero-search h1',
+    '.hero-search p',
+    '.search-wrap',
+    '.banner-section',
+    // Product cards (staggered)
+    '.product-card',
+    '.view-more-wrap',
+    // FAQ items
+    '.faq-item',
+    // About
+    '.about-text',
+    '.about-points li',
+    // Footer columns
+    '.footer-col',
+    '.footer-brand',
+    '.footer-bottom',
+    // Sub-page elements
+    '.sub-page-nav',
+    '.back-home-bar',
+    '.checkout-form-section',
+    '.cart-item',
+    '.cart-summary',
+    '.pd-img-section',
+    '.pd-info',
+    // Product detail
+    '.pd-benefits',
+    '.pd-action-btns',
+    // Buttons
+    '.btn-view-more',
+    '.whatsapp-catalog',
+    // Policy
+    '#policy-content',
+    // Section headers
+    '.section-header',
+  ];
+
+  // Direction map for specific selectors
+  var DIRECTION_MAP = {
+    '.hero-search h1':      'rv-down',
+    '.hero-search p':       'rv-fade',
+    '.search-wrap':         'rv-up',
+    '.banner-section':      'rv-scale',
+    '.about-img':           'rv-left',
+    '.about-content':       'rv-right',
+    '.pd-img-section':      'rv-left',
+    '.pd-info':             'rv-right',
+    '.section-title':       'rv-up',
+    '.section-divider':     'rv-fade',
+    '.footer-col':          'rv-up',
+    '.footer-brand':        'rv-left',
+    '.footer-bottom':       'rv-fade',
+    '.sub-page-nav':        'rv-down',
+    '.back-home-bar':       'rv-down',
+    '.page-heading h1':     'rv-up',
+    '.page-heading p':      'rv-fade',
+    '.btn-view-more':       'rv-up',
+    '.checkout-form-section':'rv-up',
+    '.cart-item':           'rv-left',
+    '.cart-summary':        'rv-right',
+    '.pd-benefits':         'rv-up',
+    '.pd-action-btns':      'rv-up',
+    '#policy-content':      'rv-up',
+    '.section-header':      'rv-up',
+    'default':              'rv-up',
+  };
+
+  var STAGGER_GROUPS = ['.product-card', '.faq-item', '.about-points li', '.footer-col', '.cart-item'];
+  var MAX_STAGGER = 6;
+
+  // Tag elements that aren't already tagged
+  function tagElements(){
+    AUTO_SELECTORS.forEach(function(sel){
+      try {
+        var els = document.querySelectorAll(sel);
+        els.forEach(function(el){
+          // Skip if inside preloader or carousels
+          if(el.closest('#preloader') || el.closest('.cat-track') || el.closest('.test-track')) return;
+          if(el.classList.contains('rv')) return; // already tagged
+          el.classList.add('rv');
+          var dir = DIRECTION_MAP[sel] || DIRECTION_MAP['default'];
+          el.classList.add(dir);
+        });
+      } catch(e){}
+    });
+
+    // Add stagger delays to sibling groups
+    STAGGER_GROUPS.forEach(function(sel){
+      try {
+        var groups = {};
+        document.querySelectorAll(sel).forEach(function(el){
+          var parent = el.parentNode;
+          if(!parent) return;
+          var key = parent;
+          if(!groups[key]) groups[key] = [];
+          groups[key].push(el);
+        });
+        Object.keys(groups).forEach(function(k){
+          // Re-query via parent
+        });
+        // Better: group by parent node reference
+        var parentMap = new Map();
+        document.querySelectorAll(sel).forEach(function(el){
+          var p = el.parentNode;
+          if(!parentMap.has(p)) parentMap.set(p,[]);
+          parentMap.get(p).push(el);
+        });
+        parentMap.forEach(function(children){
+          children.forEach(function(el, i){
+            var d = Math.min(i+1, MAX_STAGGER);
+            el.classList.add('rv-d'+d);
+          });
+        });
+      } catch(e){}
+    });
+  }
+
+  // IntersectionObserver — fires when element enters viewport
+  var observer;
+  function createObserver(){
+    if(!('IntersectionObserver' in window)){
+      // Fallback: reveal all immediately
+      document.querySelectorAll('.rv').forEach(function(el){ el.classList.add('visible'); });
+      return;
+    }
+    observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // fire once
+        }
+      });
+    },{
+      threshold: 0.08,
+      rootMargin: '0px 0px -40px 0px'
+    });
+  }
+
+  function observeAll(){
+    if(!observer) return;
+    document.querySelectorAll('.rv:not(.visible)').forEach(function(el){
+      // Skip preloader, carousels
+      if(el.closest('#preloader') || el.closest('.cat-track') || el.closest('.test-track')) return;
+      observer.observe(el);
+    });
+  }
+
+  // Re-run when a page becomes active (SPA navigation)
+  var origShowPage = window.showPage;
+  function patchShowPage(){
+    if(typeof window.showPage === 'function' && window.showPage !== patchedShowPage){
+      origShowPage = window.showPage;
+      window.showPage = patchedShowPage;
+    }
+  }
+  function patchedShowPage(pageId){
+    origShowPage.call(this, pageId);
+    // Reset rv on newly active page so elements can animate in fresh
+    var page = document.getElementById('page-'+pageId);
+    if(page){
+      page.querySelectorAll('.rv.visible').forEach(function(el){
+        // Only re-animate non-persistent elements (not product cards already seen)
+        el.classList.remove('visible');
+      });
+      setTimeout(function(){ tagElements(); observeAll(); }, 60);
+    }
+  }
+
+  // Dynamic content observer — watch for injected product cards, FAQ items etc.
+  var mutObs = new MutationObserver(function(){
+    tagElements();
+    observeAll();
+  });
+
+  function init(){
+    createObserver();
+    tagElements();
+    observeAll();
+    mutObs.observe(document.getElementById('main') || document.body, {childList:true, subtree:true});
+    // Patch showPage after a tick (it may not exist yet)
+    setTimeout(patchShowPage, 100);
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
+</body>
+</html>
